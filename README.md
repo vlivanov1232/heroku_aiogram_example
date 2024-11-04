@@ -12,7 +12,10 @@ Based on [aiogram documentation example](https://docs.aiogram.dev/en/latest/disp
 3. `heroku create`
 4. `heroku labs:enable runtime-dyno-metadata`
 5. `heroku config:set BOT_TOKEN=%your botfather bot token%`
-6. `git push heroku`
-7. `heroku ps:scale web=1`
+6. `heroku buildpacks:clear`
+7. `heroku buildpacks:add https://github.com/moneymeets/python-poetry-buildpack.git`
+8. `heroku buildpacks:add heroku/python`
+7. `git push heroku`
+8. `heroku ps:scale web=1`
  
 
